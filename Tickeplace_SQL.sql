@@ -1,4 +1,4 @@
--- ��Ű�� �߰�
+-- 아래의 테이블을 SQL로 DB에 넣어 보세요. DBMS는 여러분이 가장 잘 하실 수 있는 것으로 넣어보세요. * 오라클 기준
    CREATE TABLE WORKER
    (	WORKER_ID NUMBER NOT NULL ENABLE, 
 	FIRST_NAME VARCHAR2(50 BYTE), 
@@ -57,18 +57,18 @@ insert into title values ('003', 'Lead', to_date('2016-06-11 00:00:00','YYYY-MM-
 
 
 
--- 2
+-- 2. FIRST_NAME을 Worker에서 가져와서 WORKER_NAME이라고 alias를 만들게 SQL을 작성해보세요.
 select a.first_name as worker_name
 from worker a;
 
 
--- 3
+-- 3. FIRST_NAME을 오름차순으로 정렬해서 모든 Worker안에 자세한 정보를 출력하는 SQL을 작성해 보세요.
 select *
 from worker
 order by first_name asc;
 
 
--- 4
+-- 4. Worker table에서 직급이 Manager인 사람들의 자세한 정보를 출력하는 SQL을 작성해 보세요.
 select w.worker_id,
        w.first_name,
        w.last_name,
